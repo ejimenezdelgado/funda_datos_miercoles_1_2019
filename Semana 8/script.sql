@@ -19,10 +19,13 @@ CREATE TABLE estudiante
   );
 
 ALTER TABLE estudiante 
+  ADD COLUMN persona_id INT; 
+
+ALTER TABLE estudiante 
   ADD CONSTRAINT pk_cedula_estudiante PRIMARY KEY (cedula); 
 
 ALTER TABLE estudiante 
-  ADD CONSTRAINT fk_cedula_ FOREIGN KEY (cedula) REFERENCES persona; 
+ADD CONSTRAINT fk_cedula FOREIGN KEY (persona_id) REFERENCES persona(id);
 
 ALTER TABLE estudiante 
   ADD CONSTRAINT unique_carnet UNIQUE (carnet);
