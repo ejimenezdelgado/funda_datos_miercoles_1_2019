@@ -20,6 +20,9 @@ VALUES     ('4444',
             'Pedro Rojas', 
             4000); 
 
+SELECT *
+FROM piloto;
+
 --INSERTAR EN LA TABLA DESTINO 
 INSERT INTO destino(destino,descripcion)
 VALUES     ('1D', 
@@ -45,6 +48,9 @@ INSERT INTO destino(destino,descripcion)
 VALUES     ('6D', 
             'Montereal'); 
 
+SELECT *
+FROM destino;
+
 --INSERTAR EN LA TABLA VUELO 
 INSERT INTO vuelo(vuelo,inicio,final)
 VALUES     (520, 
@@ -64,7 +70,10 @@ VALUES     (705,
 INSERT INTO vuelo(vuelo,inicio,final)
 VALUES     (820, 
             3, 
-            6); 
+            6);
+
+SELECT *
+FROM vuelo; 
             
 --INSERTAR EN LA TABLA PROGRAMACION 
 INSERT INTO programacion(id_vuelo,fecha,hora_salida,hora_llegada,id_piloto)
@@ -101,3 +110,6 @@ VALUES     (3,
             '22:00', 
             '8:00', 
             1); 
+            
+SELECT *
+FROM programacion; 
